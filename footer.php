@@ -11,6 +11,7 @@
 
 <!-- jQuery -->
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.js"></script>
+<script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/jquery.textarea.js"></script>
 
 <script>
 $(document).ready(function() { 
@@ -32,11 +33,15 @@ $(document).ready(function() {
 		return false;
 	});
 	
+	//add tab key functionality to textareas
+	$('#markup textarea, #style textarea').tabby();
+
 	// expand/collapse side nav
 	$('#nav-toggle').click(function() {
 		$('body').toggleClass('expanded');
 		return false;
-	});
+	});	
+
 }); 
 </script>
 
